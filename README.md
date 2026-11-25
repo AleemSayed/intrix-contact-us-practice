@@ -1,139 +1,132 @@
-# Intrix Contact Us Web Application
+# Intrix Contact Us Application
 
-A modern, responsive Contact Us web application built using **Python, FastAPI, PostgreSQL, HTML, CSS, and JavaScript**.
+A full-stack Contact Us application built using **Python FastAPI, PostgreSQL, HTML, CSS and JavaScript**. The application allows users to submit contact enquiries, upload multiple attachments and receive email confirmation.
 
-The application allows users to submit enquiries through an interactive contact form. Submitted information is processed by a FastAPI backend and stored in a PostgreSQL database.
+## 🚀 Features
 
-## Features
+- **Contact Form:** Collects user contact information and enquiry details.
+- **Email Validation:** Validates email addresses before submission.
+- **Multiple File Uploads:** Allows users to attach multiple files to their enquiries.
+- **Unique Submission ID:** Generates a unique ID for every successful submission.
+- **Database Integration:** Stores contact submissions and related information in PostgreSQL.
+- **Email Confirmation:** Sends an email confirmation after successful submission.
+- **REST API:** Backend developed using FastAPI.
+- **Frontend Interface:** Built using HTML, CSS and JavaScript.
 
-- Responsive and modern user interface
-- Full Name, Phone Number and Email Address inputs
-- Subject selection dropdown
-- Message submission form
-- Client-side form validation
-- Backend API integration using FastAPI
-- PostgreSQL database integration
-- Automatic storage of submitted contact details
-- Submission success and error messages
-- Interactive button hover effects
+## 🛠️ Technologies Used
 
-## Technologies Used
+### Backend
+- Python
+- FastAPI
+- Uvicorn
+- SQLAlchemy
+- Psycopg2
 
-| Technology | Purpose |
-|---|---|
-| Python | Backend programming |
-| FastAPI | REST API development |
-| PostgreSQL | Database management |
-| SQLAlchemy | Database ORM |
-| HTML5 | Frontend structure |
-| CSS3 | Styling and responsiveness |
-| JavaScript | Form handling and API communication |
-| Git & GitHub | Version control |
+### Frontend
+- HTML
+- CSS
+- JavaScript
 
-## Project Structure
+### Database
+- PostgreSQL
+- pgAdmin 4
+
+### Python Libraries
+- python-dotenv
+- email-validator
+- python-multipart
+
+## 📁 Project Structure
 
 ```text
 Intrix-Contact-us/
 │
 ├── app/
 │   ├── __init__.py
-│   ├── main.py
 │   ├── database.py
+│   ├── main.py
 │   ├── models.py
 │   └── schemas.py
 │
 ├── frontend/
 │   ├── index.html
-│   ├── styles.css
-│   └── script.js
+│   ├── script.js
+│   └── styles.css
 │
 ├── .env
 ├── .gitignore
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
-## How It Works
+## ⚙️ Installation & Setup
 
-1. A user opens the Contact Us webpage.
-2. The user enters their name, phone number, email address, subject and message.
-3. JavaScript collects and validates the form information.
-4. The frontend sends the information to the FastAPI backend through a POST request.
-5. FastAPI processes the request.
-6. SQLAlchemy communicates with PostgreSQL.
-7. The submitted contact information is stored in the database.
-8. The user receives a submission confirmation.
-
-## API Endpoint
-
-**POST** `/api/contact`
-
-Accepts contact form submissions and stores the information in the PostgreSQL database.
-
-## Installation and Setup
-
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/AleemSayed/intrix-contact-us-practice.git
 ```
 
-### 2. Navigate to the project folder
+### 2. Navigate to the Project Folder
 
 ```bash
 cd intrix-contact-us-practice
 ```
 
-### 3. Create a virtual environment
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### 4. Activate the virtual environment (Windows)
+### 4. Activate the Virtual Environment
+
+For Windows PowerShell:
 
 ```bash
-venv\Scripts\activate
+venv\Scripts\Activate
 ```
 
-### 5. Install dependencies
+### 5. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 6. Configure the database
+### 6. Configure Environment Variables
 
-- Install and configure PostgreSQL.
-- Create the required database.
-- Configure your database connection settings in the `.env` file according to `app/database.py`.
+Create a `.env` file in the root directory and configure the required database and email credentials.
 
-### 7. Start the backend server
+**Important:** Keep your credentials private. Never upload your `.env` file to GitHub.
+
+### 7. Run the Application
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-The backend will run at:
+The FastAPI development server will start locally.
 
-`http://127.0.0.1:8000`
+## 🗄️ Database
 
-### 8. Launch the frontend
+The application uses PostgreSQL to store contact form submissions and associated information.
 
-Open `frontend/index.html` using VS Code Live Server.
+Database management and inspection can be performed using pgAdmin 4.
 
-## Future Improvements
+## 📎 File Uploads
 
-- Email notifications after successful submissions
-- Admin dashboard to manage enquiries
-- Search and filter submitted contacts
-- Deployment to a cloud hosting platform
+The application supports multiple file attachments through the contact form. Uploaded files are handled by the backend and associated with their respective submissions.
 
-## Author
+## 📧 Email Confirmation
 
-**Aleem Sayed**
+After a successful contact form submission, the application sends an email confirmation to the user.
 
-GitHub: [AleemSayed](https://github.com/AleemSayed)
+## 🔗 Repository
 
----
+GitHub: https://github.com/AleemSayed/intrix-contact-us-practice
 
-*Built as a practical full-stack web development project to explore frontend development, REST API integration, backend processing and relational database management.*
+## 👨‍💻 Developer
+
+**Aleem Azhar Sayed**
+
+Developed as a practical full-stack application to demonstrate backend development, database integration, file handling, API development and frontend integration.
